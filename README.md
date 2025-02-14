@@ -1,50 +1,30 @@
-# React + TypeScript + Vite
+APLICACION ONLINE SHOPPING
+Esta es una aplicación de compras en línea en desarrollo, construida con React y TypeScript. Permite explorar productos con una interfaz moderna creada con Vite, Tailwind CSS y componentes de ShadCN/UI. Actualmente, es solo el inicio del desarrollo, con planes de agregar más funcionalidades en el futuro.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Características
+🛍️ Exploración de productos: Navega por una variedad de productos disponibles.
+🔎 Búsqueda de productos: Funcionalidad para buscar productos por nombre.
+📱 Interfaz responsiva: Adaptada para funcionar en dispositivos móviles y de escritorio.
+🎨 Diseño moderno: Estilizada con Tailwind CSS y utilizando componentes reutilizables de ShadCN/UI.
+⚡ Desempeño optimizado: Construido con Vite para un desarrollo rápido y eficiente.
 
-Currently, two official plugins are available:
+TECNOLOGIAS UTILIZADAS
+🚀 React: Para la construcción de la interfaz de usuario y la lógica
+📈 TypeScript: Para la seguridad y la extensibilidad del código
+🚀 Vite: Para el desarrollo rápido y eficiente
+🎨 Tailwind CSS: Para el diseño y la estilización
+📦 ShadCN/UI: Para componentes reutilizables y estilos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+REQUISITOS PREVIOS
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Antes de comenzar, asegúrese de tener instalados:
+📦 Node.js
+📦 npm (o yarn)
 
-- Configure the top-level `parserOptions` property like this:
+INSTALACION 
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+CLONAR EL REPO
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+git@github.com:lalorodriguezz/app-biblia.git
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```

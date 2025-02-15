@@ -7,7 +7,8 @@ module.exports = defineConfig({
       framework: "react",
       bundler: "vite",
     },
-    specPattern: 'src/**/*.cy.tsx',
+    specPattern: 'src/*/.cy.tsx',
+    supportFile: false, // Agregar esto para evitar el error
   },
   e2e: {
     baseUrl: 'http://localhost:5173',

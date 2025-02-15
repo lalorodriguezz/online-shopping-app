@@ -1,16 +1,17 @@
-const { defineConfig } = require('cypress')
+import { defineConfig } from 'cypress'
 
-module.exports = defineConfig({
+export default defineConfig({
+
+  component: {
+    devServer: {
+      framework: "react",
+      bundler: "vite",
+    },
+    specPattern: 'src/**/*.cy.tsx',
+  },
   projectId: "64y54w",
   e2e: {
-    baseUrl: 'http://localhost:5173',
-    specPattern: '**/*.spec.ts',
+    baseUrl: 'http://localhost:1234',
     supportFile: false,
-
-    // Record screenshots and videos
-    video: true,
-    videoCompression: 32,
-    screenshots: true,
   },
-  testFiles: '**/*.spec.ts',
 })

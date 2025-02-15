@@ -20,7 +20,7 @@ describe('Online Shopping App - RecipeCard', () => {
   
     it('debe mostrar la imagen con el alt "Online Shopping"', () => {
       cy.get('img[alt="Online Shopping"]').should('be.visible');
-    });
+    }); 
   
   }); 
   

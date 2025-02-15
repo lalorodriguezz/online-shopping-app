@@ -22,5 +22,5 @@ describe('Online Shopping App - RecipeCard', () => {
       cy.get('img[alt="Online Shopping"]').should('be.visible');
     });
   
-  });
+  }); 
   

@@ -1,0 +1,42 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing App.tsx > Debe renderizar correctamente el componente App 1`] = `
+<body>
+  <div>
+    <div>
+      <div
+        class="flex items-center justify-center min-h-screen bg-gradient-to-b from-blue-50 via-white to-blue-100 px-4"
+      >
+        <div
+          class="bg-white p-8 lg:p-12 rounded-3xl shadow-xl max-w-md w-full text-center transform hover:scale-105 transition-transform duration-300"
+        >
+          <div
+            class="w-44 h-44 lg:w-52 lg:h-52 mx-auto overflow-hidden rounded-2xl"
+          >
+            <img
+              alt="Online Shopping"
+              class="w-full h-full object-cover"
+              src="/src/components/ui/images/imagen1.png"
+            />
+          </div>
+          <h2
+            class="text-3xl lg:text-4xl font-extrabold text-gray-900 mt-6"
+          >
+            Online Shopping
+          </h2>
+          <p
+            class="text-gray-500 text-base lg:text-lg mt-3"
+          >
+            You can shopping  anytime, anywhere that you want.
+          </p>
+          <button
+            class="mt-6 w-[90%] bg-green-500 hover:bg-green-900 text-white font-semibold py-3 px-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+          >
+            Shopping Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;

@@ -7,7 +7,7 @@ module.exports = defineConfig({
       framework: "react",
       bundler: "vite",
     },
-    specPattern: 'src/*/.cy.tsx',
+    specPattern: 'cypress/component/*/.cy.{js,jsx,ts,tsx}',
     supportFile: false, // Agregar esto para evitar el error
   },
   e2e: {

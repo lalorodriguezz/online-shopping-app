@@ -7,7 +7,7 @@ module.exports = defineConfig({
       framework: "react",
       bundler: "vite",
     },
-    specPattern: 'src/test/*/.cy.{js,jsx,ts,tsx}', // Ajustar el patrón a la ubicación real
+    specPattern: 'src/test/*/.{cy,test}.{js,jsx,ts,tsx}',
     supportFile: false, 
   },
   e2e: {

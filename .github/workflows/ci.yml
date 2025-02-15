@@ -22,10 +22,21 @@ jobs:
           node-version: '22'
 
       - name: 📦 Instalar dependencias
-        run: npm install
+        run: npm ci
 
       - name: 🧪 Correr tests con coverage
         run: npm run test -- --coverage
+
+      - name: 📊 Subir los resultados a Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          file: ./coverage/lcov.info
+          flags: unittests
+          name: codecov-actions
+      
+      - name: 📋 Subir los detalles de los test a Codecov
+        if: ${{ !cancelled() }}
+        uses: codecov/test-results-action@v1
 
   cypress-run:
     runs-on: ubuntu-latest
@@ -37,6 +48,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: 🔧 Configurar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: 📦 Instalar dependencias
+        run: npm ci
+
+      - name: Run Cypress Component Tests
+        run: npx cypress run --component
+
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
@@ -45,7 +68,8 @@ jobs:
           record: true
           parallel: true
         env:
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}        
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+         
 
   deploy:
     runs-on: ubuntu-latest
@@ -58,5 +82,5 @@ jobs:
         uses: johnbeynon/render-deploy-action@v0.0.8
         with:
           service-id: ${{ secrets.RENDER_SERVICE_ID }}
-          api-key: ${{ secrets.RENDER_API_KEY }}  
-  
+          api-key: ${{ secrets.RENDER_API_KEY }}
+          wait-for-success: true

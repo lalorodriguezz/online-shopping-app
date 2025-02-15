@@ -2,7 +2,7 @@
 
 describe('Online Shopping App - RecipeCard', () => {
     beforeEach(() => {
-      cy.visit('http://localhost:5174'); // Asegúrate de que esta es la URL correcta de tu app
+      cy.visit('http://localhost:5173'); // Asegúrate de que esta es la URL correcta de tu app
     });
   
     it('debe mostrar el título "Online Shopping" en la página principal', () => {

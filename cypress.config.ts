@@ -11,7 +11,7 @@ export default defineConfig({
   },
   projectId: "64y54w",
   e2e: {
-    baseUrl: 'http://localhost:1234',
+    baseUrl: 'http://localhost:5173',
     supportFile: false,
   },
 })

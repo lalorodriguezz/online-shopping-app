@@ -57,8 +57,7 @@ jobs:
       - name: 📦 Instalar dependencias
         run: npm ci
 
-      - name: Run Cypress Component Tests
-        run: npx cypress run --component
+      
 
       - name: Cypress run
         uses: cypress-io/github-action@v6

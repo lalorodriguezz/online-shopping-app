@@ -1,4 +1,4 @@
-const { defineConfig } = require('cypress')
+const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
   projectId: "64y54w",
@@ -7,16 +7,14 @@ module.exports = defineConfig({
       framework: "react",
       bundler: "vite",
     },
-    specPattern: 'cypress/component/*/.cy.{js,jsx,ts,tsx}',
-    supportFile: false, // Agregar esto para evitar el error
+    specPattern: 'src/test/*/.cy.{js,jsx,ts,tsx}', // Ajustar el patrón a la ubicación real
+    supportFile: false, 
   },
   e2e: {
     baseUrl: 'http://localhost:5173',
     supportFile: false,
-
-    // Record screenshots and videos
     video: true,
     videoCompression: 32,
     screenshots: true,
   },
-})
+});
